@@ -12,7 +12,13 @@ class NewClass{
     // properties
     public $info ;
     public $eyeColor ;
-    private $age ;
+    public $age ;
+
+    public function __construct($info,$eyeColor,$age){
+        $this->info = $info;
+        $this->eyeColor = $eyeColor;
+        $this-> age = $age;
+    }
 
     public function firstName($info){
         $this->info = $info;
@@ -23,9 +29,13 @@ class NewClass{
     
     
 }
-$object = new NewClass();
-$object->firstName('douglasOkee');
+$object = new NewClass('this is my name','blue',24);
+// $object->firstName('douglasOkee');
 echo $object->info;
+echo $object->eyeColor;
+echo $object->age;
+$object.firstName('helllllooo');
+
 
 // var_dump($object)
 
